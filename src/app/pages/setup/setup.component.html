@@ -1,1 +1,24 @@
-<p>setup works!</p>
+<div class="full-screen page-content">
+  <div class="wrapper">
+    <img src="./assets/img/logo.png" class="logo-img" alt="">
+    <div class="text-wrapper">
+      <h1 class="title-text">
+        Today
+      </h1>
+    </div>
+    <input 
+    nz-input 
+    placeholder="请输入你喜欢的用户" 
+    [(ngModel)]="username"
+    >
+    <button 
+    nz-button 
+    nzType="primary" 
+    (click)="completeSetup()" >
+      Begin
+    </button>
+    <div class="copy-right">
+      Copyright &copy; 2018 Tilark
+    </div>
+  </div>
+</div>

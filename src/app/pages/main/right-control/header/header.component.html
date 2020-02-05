@@ -1,1 +1,41 @@
-<p>header works!</p>
+<div class="header-container">
+  <img class="background-img" src="./assets/img/logo.png" alt="">
+  <div class="list-title-wrapper">
+    {{listTitle}}
+  </div>
+
+  <div class="suggest-btn-wrapper">
+    <a nz-dropdown 
+    [nzDropdownMenu]="menu"
+    [nzClickHide]="false"
+    [nzTrigger]="click"
+    nz-button
+    [nzType]="primary"
+    >
+      建议
+      <i nz-icon nzType="down"></i>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item>1st menu item</li>
+        <li nz-submenu nzTitle="排序">
+          <ul>
+            <li nz-menu-item (click)="switchRankType('title')">
+          名称
+          </li>
+          <li nz-menu-item (click)="switchRankType('planAt')">
+            计划时间
+          </li>
+          <li nz-menu-item (click)="switchRankType('dueAt')">
+            截止时间
+          </li>
+          <li nz-menu-item (click)="switchRankType('completeFlag')">
+            完成状态
+          </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+  
+</div>

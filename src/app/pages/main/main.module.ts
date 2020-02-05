@@ -9,6 +9,7 @@ import { HeaderComponent } from './right-control/header/header.component';
 import { QuaikAddComponent } from './right-control/quaik-add/quaik-add.component';
 import { TodoComponent } from './right-control/todo/todo.component';
 import { FormsModule } from '@angular/forms';
+import { SuggestComponent } from './right-control/header/suggest/suggest.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     QuaikAddComponent,
     TodoComponent,
+    SuggestComponent,
     ],
   imports: [
     CommonModule,

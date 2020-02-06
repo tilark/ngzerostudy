@@ -6,8 +6,8 @@ import { MainComponent } from './pages/main/main.component';
 const routes: Routes = [
   { path: 'setup', component: SetupComponent},
   { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) },
-  { path: 'main', component: MainComponent},
-  { path: '', pathMatch: 'full', redirectTo: 'main' },
+  { path: 'main', redirectTo: '/main', pathMatch: 'full'},
+  { path: '', pathMatch: 'full', redirectTo: 'setup' },
 ];
 
 @NgModule({

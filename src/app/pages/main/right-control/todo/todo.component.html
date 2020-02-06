@@ -6,6 +6,7 @@
                 let-item>
     <nz-list-item class="todo-item"
                   (contextmenu)="contextMenu($event, todoContextRef, item._id)"
+                  (click)="click(item._id)"
                   >
 
       <nz-list-item-meta [nzTitle]="nzTitle"

@@ -10,6 +10,8 @@ import { QuaikAddComponent } from './right-control/quaik-add/quaik-add.component
 import { TodoComponent } from './right-control/todo/todo.component';
 import { FormsModule } from '@angular/forms';
 import { SuggestComponent } from './right-control/header/suggest/suggest.component';
+import { DetailComponent } from './detail/detail.component';
+import { MainRoutingModule } from './main-routing.module';
 
 
 @NgModule({
@@ -22,12 +24,13 @@ import { SuggestComponent } from './right-control/header/suggest/suggest.compone
     QuaikAddComponent,
     TodoComponent,
     SuggestComponent,
+    DetailComponent,
     ],
   imports: [
     CommonModule,
     NgZorroAntdModule,
-    FormsModule
-
+    FormsModule,
+    MainRoutingModule
   ]
 })
 export class MainModule { }

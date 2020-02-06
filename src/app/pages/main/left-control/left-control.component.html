@@ -5,11 +5,15 @@
   {{ username }}
   </span>
   <div class="floating-btn header-btn"
-        *ngIf="!isCollapsed">
+        *ngIf="!isCollapsed"
+        (click)="goSettings()"
+        >
     <i class="anticon anticon-setting"></i>
   </div>
   <div class="floating-btn header-btn"
-        *ngIf="!isCollapsed">
+        *ngIf="!isCollapsed"
+        routerLink="/summary"
+        >
         <i class="anticon anticon-calendar"></i>
   </div>
 </div>

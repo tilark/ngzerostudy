@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
 import { USERNAME } from 'src/app/services/local-storage/local-storage.service.namespace';
 import { ListComponent } from './list/list.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-left-control',
@@ -13,7 +14,8 @@ export class LeftControlComponent implements OnInit {
   @ViewChild(ListComponent, { static: false }) listComponent: ListComponent;
   username: string;
   constructor(
-    private store: LocalStorageService
+    private store: LocalStorageService,
+    private router: Router
     ) { }
 
   ngOnInit() {
@@ -22,5 +24,13 @@ export class LeftControlComponent implements OnInit {
 
   openAddListModal() {
     this.listComponent.openAddListModal();
+  }
+  goSummary() {
+    this.router.navigateByUrl('/summary');
+  }
+  goSettings() {
+    this.router.navigateByUrl('/settings');
+    // this.router.navigateByUrl('/welcome');
+
   }
 }

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SetupComponent } from './pages/setup/setup.component';
-import { MainComponent } from './pages/main/main.component';
 import { InitGuradService } from './services/init-guard/init-gurad.service';
 
 const routes: Routes = [
@@ -11,6 +10,8 @@ const routes: Routes = [
     canActivate: [ InitGuradService ]
   },
   { path: 'main', redirectTo: '/main', pathMatch: 'full'},
+  { path: 'summary', loadChildren: () => import('./pages/summary/summary.module').then(m => m.SummaryModule)},
+  { path: 'settings', loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule)},
   { path: '', pathMatch: 'full', redirectTo: 'setup' },
 ];
 

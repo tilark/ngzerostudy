@@ -1,3 +1,6 @@
+# 说明
+该教程是使用了官方推荐教程，[链接](https://github.com/NG-ZORRO/today-ng-steps)。
+
 # Ngzerostudy
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
